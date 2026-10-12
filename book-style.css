@@ -6,43 +6,43 @@
 
 :root,
 html[data-theme="beige"]{
-  --bg:#fdf7ec;
-  --paper:#fffdf8;
-  --paper-2:#fbf3e3;
-  --ink:#2b2b33;
-  --muted:#7c7488;
-  --line:#f0e6d5;
-  --accent:#e07b39;
-  --accent-ink:#8a4a12;
-  --accent-bg:#fdeede;
-  --accent-line:#f4d9bd;
-  --alt:#2f9e74;
-  --alt-ink:#1f6b4f;
-  --alt-bg:#e8f6ef;
-  --alt-bg-2:#d6ede2;
-  --alt-line:#c4e6d6;
-  --shadow:0 6px 22px rgba(90,60,20,.10);
-  --radius:18px;
+  --bg:#fff7e6;
+  --paper:#ffffff;
+  --paper-2:#fff3d9;
+  --ink:#2b2440;
+  --muted:#7a6f8f;
+  --line:#ffe6b8;
+  --accent:#ff8a3d;
+  --accent-ink:#9c4a0a;
+  --accent-bg:#fff0dd;
+  --accent-line:#ffd9ad;
+  --alt:#12b886;
+  --alt-ink:#0b6b4f;
+  --alt-bg:#e3fbf1;
+  --alt-bg-2:#c8f4e3;
+  --alt-line:#a9ecd2;
+  --shadow:0 10px 26px rgba(255,138,61,.16);
+  --radius:22px;
 }
 
 html[data-theme="dark"]{
-  --bg:#171a1f;
-  --paper:#1f242b;
-  --paper-2:#242a32;
-  --ink:#eef1f5;
-  --muted:#9aa4b0;
-  --line:#2e343d;
-  --accent:#f0a35e;
-  --accent-ink:#f3c795;
-  --accent-bg:#2a2217;
-  --accent-line:#4a3a24;
-  --alt:#5fd0a0;
-  --alt-ink:#a9e8cb;
-  --alt-bg:#15251f;
-  --alt-bg-2:#0f1c17;
-  --alt-line:#2f4a3f;
-  --shadow:0 6px 22px rgba(0,0,0,.35);
-  --radius:18px;
+  --bg:#1a1630;
+  --paper:#241f3d;
+  --paper-2:#2b2549;
+  --ink:#f1eeff;
+  --muted:#a79fc4;
+  --line:#3a3360;
+  --accent:#ffb057;
+  --accent-ink:#ffd9a8;
+  --accent-bg:#2e2748;
+  --accent-line:#544a7d;
+  --alt:#3ddc97;
+  --alt-ink:#b6f5d8;
+  --alt-bg:#14352a;
+  --alt-bg-2:#0e2a21;
+  --alt-line:#2f6b52;
+  --shadow:0 12px 28px rgba(0,0,0,.40);
+  --radius:22px;
 }
 
 *{box-sizing:border-box}
@@ -420,6 +420,23 @@ article.card{position:relative}
 .card-read.read .mark{background:var(--accent);border-color:var(--accent);color:#fff}
 article.card.is-read{opacity:.6}
 article.card.is-read:hover{opacity:1}
+
+/* ---------- детские акценты (мультяшный стиль) ---------- */
+body{font-family:"Nunito","Segoe UI",Roboto,Arial,sans-serif}
+h1,h2,h3,h4,.hero h1,.part-head h2,.cat-head h2,.ch-title h3,.card h3{
+  font-family:"Baloo 2","Nunito","Segoe UI",sans-serif;
+  letter-spacing:.01em;
+}
+article.card{
+  border-top:6px solid var(--accent);
+  transition:transform .18s ease, box-shadow .18s ease;
+}
+article.card:hover{transform:translateY(-5px) rotate(-.5deg)}
+article.card.edu{border-top-color:var(--alt)}
+.kicker,.blocklabel,.tag,.author,.pill,nav.toc,footer,.read-toggle,.theme-toggle,.progress-chip,.to-top,.page-bar{
+  font-family:"Nunito","Segoe UI",Roboto,Arial,sans-serif;
+}
+.hero h1{font-size:clamp(30px,5.6vw,52px)}
 
 @media (orientation: landscape) and (max-height: 560px) and (pointer: coarse){
   body.embedded .page-bar{display:none}

@@ -50,6 +50,29 @@
 
   onReady(function () {
     if (embedded) { document.body.classList.add("embedded"); }
+    // детские шрифты (подключаются динамически, чтобы не править все страницы)
+    if (!document.getElementById("kidfonts")) {
+      var lk = document.createElement("link");
+      lk.id = "kidfonts";
+      lk.rel = "stylesheet";
+      lk.href = "https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@400;600;700;800&display=swap";
+      document.head.appendChild(lk);
+    }
+    // эмодзи-акценты в шапке страницы (возраст/тип)
+    try {
+      var k = document.querySelector(".kicker");
+      if (k && !k.getAttribute("data-emoji")) {
+        var txt = k.textContent || "";
+        var e = "";
+        if (/5–8/.test(txt)) { e += "🐣 "; }
+        else if (/8–11/.test(txt)) { e += "🎒 "; }
+        else if (/11–14/.test(txt)) { e += "🚀 "; }
+        else if (/14–19/.test(txt)) { e += "🎓 "; }
+        if (/Художественная/.test(txt)) { e += "📖 "; }
+        else if (/Познавательная/.test(txt)) { e += "🔬 "; }
+        if (e) { k.textContent = e + txt; k.setAttribute("data-emoji", "1"); }
+      }
+    } catch (e) {}
     var readBtn = null, readBar = null, finishBtn = null;
     var chip = null, barProgress = null;
     var toTop = null, toTopBar = null;

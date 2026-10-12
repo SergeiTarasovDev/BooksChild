@@ -17,30 +17,30 @@
 </script>
 <style>
   :root, html[data-theme="beige"]{
-    --chrome:#fdf7ec;
-    --chrome-2:#f8eeda;
-    --line:#f0e6d5;
-    --text:#2b2b33;
-    --muted:#7c7488;
-    --gold:#e07b39;
-    --frame:#fffdf8;
-    --scroll:#e6d8c0;
-    --accent-line:#f4d9bd;
-    --paper:#fffdf8;
-    --outside:#f3ead8;
+    --chrome:#fff7e6;
+    --chrome-2:#fff0d6;
+    --line:#ffe6b8;
+    --text:#2b2440;
+    --muted:#7a6f8f;
+    --gold:#ff8a3d;
+    --frame:#ffffff;
+    --scroll:#ffd9ad;
+    --accent-line:#ffd9ad;
+    --paper:#ffffff;
+    --outside:#ffeec9;
   }
   html[data-theme="dark"]{
-    --chrome:#171a1f;
-    --chrome-2:#1f242b;
-    --line:#2e343d;
-    --text:#eef1f5;
-    --muted:#9aa4b0;
-    --gold:#f0a35e;
-    --frame:#1f242b;
-    --scroll:#3a414b;
-    --accent-line:#4a3a24;
-    --paper:#1f242b;
-    --outside:#0f1216;
+    --chrome:#1a1630;
+    --chrome-2:#241f3d;
+    --line:#3a3360;
+    --text:#f1eeff;
+    --muted:#a79fc4;
+    --gold:#ffb057;
+    --frame:#241f3d;
+    --scroll:#3a3360;
+    --accent-line:#544a7d;
+    --paper:#241f3d;
+    --outside:#120f22;
   }
   *{box-sizing:border-box}
   html,body{height:100%;margin:0}
@@ -479,12 +479,13 @@
       name: "Каталог",
       color: "#e07b39",
       items: [
-        { title: "Каталог книг", file: "catalog.html" }
+        { title: "📚 Каталог книг", file: "catalog.html" }
       ]
     },
     {
-      name: "5–8 лет · Художественные",
-      color: "#e07b39",
+      name: "🐣 5–8 лет · 📖 Художественные",
+      short: "🐣 5–8 · 📖",
+      color: "#ff8a3d",
       items: [
         { title: "Маленький принц", file: "Маленький-принц.html" },
         { title: "Винни-Пух и все-все-все", file: "Винни-Пух.html" },
@@ -495,8 +496,9 @@
       ]
     },
     {
-      name: "5–8 лет · Познавательные",
-      color: "#2f9e74",
+      name: "🐣 5–8 лет · 🔬 Познавательные",
+      short: "🐣 5–8 · 🔬",
+      color: "#12b886",
       items: [
         { title: "Приключения Чевостика", file: "Чевостик.html" },
         { title: "Что делать, если…", file: "Что-делать-если.html" },
@@ -506,8 +508,9 @@
       ]
     },
     {
-      name: "8–11 лет · Художественные",
-      color: "#e07b39",
+      name: "🎒 8–11 лет · 📖 Художественные",
+      short: "🎒 8–11 · 📖",
+      color: "#ff8a3d",
       items: [
         { title: "Гарри Поттер и философский камень", file: "Гарри-Поттер-1.html" },
         { title: "Матильда", file: "Матильда.html" },
@@ -518,8 +521,9 @@
       ]
     },
     {
-      name: "8–11 лет · Познавательные",
-      color: "#2f9e74",
+      name: "🎒 8–11 лет · 🔬 Познавательные",
+      short: "🎒 8–11 · 🔬",
+      color: "#12b886",
       items: [
         { title: "Как устроен человек", file: "Как-устроен-человек.html" },
         { title: "Научные забавы", file: "Научные-забавы.html" },
@@ -529,8 +533,9 @@
       ]
     },
     {
-      name: "11–14 лет · Художественные",
-      color: "#e07b39",
+      name: "🚀 11–14 лет · 📖 Художественные",
+      short: "🚀 11–14 · 📖",
+      color: "#ff8a3d",
       items: [
         { title: "Гарри Поттер и узник Азкабана", file: "Гарри-Поттер-3.html" },
         { title: "Хоббит, или Туда и обратно", file: "Хоббит.html" },
@@ -541,8 +546,9 @@
       ]
     },
     {
-      name: "11–14 лет · Познавательные",
-      color: "#2f9e74",
+      name: "🚀 11–14 лет · 🔬 Познавательные",
+      short: "🚀 11–14 · 🔬",
+      color: "#12b886",
       items: [
         { title: "Занимательная физика", file: "Занимательная-физика.html" },
         { title: "Живая математика", file: "Живая-математика.html" },
@@ -551,8 +557,9 @@
       ]
     },
     {
-      name: "14–19 лет · Художественные",
-      color: "#e07b39",
+      name: "🎓 14–19 лет · 📖 Художественные",
+      short: "🎓 14–19 · 📖",
+      color: "#ff8a3d",
       items: [
         { title: "Убить пересмешника", file: "Убить-пересмешника.html" },
         { title: "1984", file: "1984.html" },
@@ -563,8 +570,9 @@
       ]
     },
     {
-      name: "14–19 лет · Познавательные",
-      color: "#2f9e74",
+      name: "🎓 14–19 лет · 🔬 Познавательные",
+      short: "🎓 14–19 · 🔬",
+      color: "#12b886",
       items: [
         { title: "Sapiens", file: "Sapiens.html" },
         { title: "Думай медленно, решай быстро", file: "Думай-медленно.html" },
@@ -625,7 +633,7 @@
       wrap.appendChild(panel);
       navEl.appendChild(wrap);
 
-      catSections.push({ name: cat.name, wrap: wrap, head: head });
+      catSections.push({ name: cat.name, short: cat.short, wrap: wrap, head: head });
     }
 
     cat.items.forEach(function (book) {
@@ -877,7 +885,7 @@
     }
     catSections.forEach(function (s) {
       var t = s.head.querySelector(".menu-head-txt");
-      if (t) { t.textContent = mobile ? s.name : s.name.split(" ")[0]; }
+      if (t) { t.textContent = mobile ? s.name : (s.short || s.name.split(" ")[0]); }
     });
   }
   [mqSmall, mqTouch].forEach(function (m) {
