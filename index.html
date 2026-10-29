@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Книги для детей</title>
+<title>Гайды и книги для детей</title>
 <script>
   /* Тема применяется до отрисовки, чтобы не было мигания. */
   (function () {
@@ -474,7 +474,30 @@
   </div>
 
 <script>
-      const catalog = [
+  const catalog = [
+    {
+      name: "🧭 Гайды",
+      short: "🧭 Гайды",
+      color: "#ff8a3d",
+      items: [
+        { title: "Витрина гайдов", file: "guides.html", noCheck: true },
+        { title: "Как устроены деньги", file: "guide-money.html", noCheck: true },
+        { title: "Сон, еда и движение", file: "guide-sleep-food-movement.html", noCheck: true }
+        ,{ title: "Эмоции и разговоры", file: "guide-emotions-and-talk.html", noCheck: true }
+        ,{ title: "Цифровая безопасность", file: "guide-digital-safety.html", noCheck: true }
+        ,{ title: "Учёба и время", file: "guide-study-and-time.html", noCheck: true }
+        ,{ title: "Споры и границы", file: "guide-conflicts-and-boundaries.html", noCheck: true }
+        ,{ title: "Выбор профессии", file: "guide-career-and-profession.html", noCheck: true }
+        ,{ title: "Как принимать решения и проверять информацию", file: "guide-decisions-and-facts.html", noCheck: true }
+        ,{ title: "Бытовая самостоятельность", file: "guide-home-and-independence.html", noCheck: true }
+      ]
+    },
+    {
+      name: "📚 Книжная полка",
+      short: "📚 Полка",
+      color: "#12b886",
+      items: [ { title: "Все книги по возрастам", file: "catalog.html", noCheck: true } ]
+    },
     {
       name: "Каталог",
       color: "#ff8a3d",
@@ -657,7 +680,7 @@
     let panel = null;
     if (!isCatalogCat) {
       const wrap = document.createElement("div");
-      wrap.className = "menu-group" + (openCats[cat.name] ? " open" : "");
+      wrap.className = "menu-group" + (openCats[cat.name] !== false ? " open" : "");
 
       const head = document.createElement("button");
       head.type = "button";
