@@ -10,6 +10,7 @@
     document.querySelectorAll(".theme-toggle button").forEach(function (b) { b.classList.toggle("active", b.dataset.value === t); });
   }
   document.documentElement.setAttribute("data-theme", theme);
+  if (window.parent !== window) document.documentElement.classList.add("embedded-guide");
   document.addEventListener("click", function (e) {
     var themeButton = e.target.closest(".theme-toggle button");
     if (themeButton) setTheme(themeButton.dataset.value);
